@@ -50,33 +50,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   </head>
-  <script>
-    document.getElementById("waForm").addEventListener("submit", function (e) {
-      e.preventDefault();
 
-      const name = document.querySelector('[name="name"]').value;
-      const email = document.querySelector('[name="email"]').value;
-      const date = document.querySelector('[name="date"]').value;
-      const time = document.querySelector('[name="time"]').value;
-      const message = document.querySelector('[name="message"]').value;
-
-      const nomor = "6285331037187"; // ganti nomor WA kamu
-
-      const text = `Halo, saya menghubungi dari website
-
-      Nama : ${name}
-      Email : ${email}
-      Tanggal : ${date}
-      Jam : ${time}
-      Pesan : ${message}
-      `;
-
-      const url =
-        "https://wa.me/" + nomor + "?text=" + encodeURIComponent(text);
-
-      window.open(url, "_blank");
-    });
-  </script>
   <body class="contact-page">
     <header id="header" class="header fixed-top">
       <div class="topbar d-flex align-items-center dark-background">
@@ -455,6 +429,35 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("waForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.querySelector('[name="name"]').value;
+          const email = document.querySelector('[name="email"]').value;
+          const date = document.querySelector('[name="date"]').value;
+          const time = document.querySelector('[name="time"]').value;
+          const message = document.querySelector('[name="message"]').value;
+
+          const nomor = "6285331037187"; // ganti nomor WA kamu
+
+          const text = `Halo, saya menghubungi dari website
+
+      Nama : ${name}
+      Email : ${email}
+      Tanggal : ${date}
+      Jam : ${time}
+      Pesan : ${message}
+      `;
+
+          const url =
+            "https://wa.me/" + nomor + "?text=" + encodeURIComponent(text);
+
+          window.open(url, "_blank");
+        });
+    </script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
