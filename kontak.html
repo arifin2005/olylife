@@ -50,7 +50,33 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   </head>
+  <script>
+    document.getElementById("waForm").addEventListener("submit", function (e) {
+      e.preventDefault();
 
+      const name = document.querySelector('[name="name"]').value;
+      const email = document.querySelector('[name="email"]').value;
+      const date = document.querySelector('[name="date"]').value;
+      const time = document.querySelector('[name="time"]').value;
+      const message = document.querySelector('[name="message"]').value;
+
+      const nomor = "6281234567890"; // ganti nomor WA kamu
+
+      const text = `Halo, saya menghubungi dari website
+
+Nama : ${name}
+Email : ${email}
+Tanggal : ${date}
+Jam : ${time}
+Pesan : ${message}
+`;
+
+      const url =
+        "https://wa.me/" + nomor + "?text=" + encodeURIComponent(text);
+
+      window.open(url, "_blank");
+    });
+  </script>
   <body class="contact-page">
     <header id="header" class="header fixed-top">
       <div class="topbar d-flex align-items-center dark-background">
@@ -208,7 +234,7 @@
                   yang lebih baik bersama Olylife. Kami siap mendukung Anda
                   menuju hidup yang lebih sehat dan bugar!
                 </p>
-                <form id="waform">
+                <form id="waForm">
                   <div class="row g-4">
                     <div class="col-md-6">
                       <input
