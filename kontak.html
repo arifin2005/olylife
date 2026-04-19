@@ -471,7 +471,11 @@
           const rawDate = document.querySelector('[name="date"]').value;
           const time = document.querySelector('[name="time"]').value;
           const message = document.querySelector('[name="message"]').value;
-
+          let date = "";
+          if (rawDate) {
+            const [year, month, day] = rawDate.split("-");
+            date = `${day}/${month}/${year}`;
+          }
           const nomor = "6285331037187"; // ganti nomor WA kamu
 
           const text = `Halo, saya ingin membuat jadwal terapi
